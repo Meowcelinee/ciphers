@@ -81,6 +81,10 @@ def main():
             msg = input('Enter your message: ')
             key = int(input('Enter the decryption key: '))
             decrypt(msg, key)
+        
+        if not method in ['encrypt', 'decrypt']:
+            print('Method must be either "encrypt" or "decrypt".')
+            exit(1)
 
     except Exception as e:
         print(e)
